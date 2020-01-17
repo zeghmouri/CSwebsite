@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBMask, MDBRow, MDBCol, MDBBtn,  MDBView, MDBContainer, MDBFormInline, MDBCard, MDBCardBody, MDBInput } from "mdbreact";
+import { MDBAnimation } from "mdbreact";
 import "./homepage.css";
+import logo from "../../assets/LogoCaS.png"
 
 class ContactFormPage extends Component {
   state = {
@@ -36,7 +38,7 @@ class ContactFormPage extends Component {
             >
               <MDBContainer>
                 <MDBNavbarBrand>
-                  <strong className="white-text">MDB</strong>
+                  <strong className="white-text">Code&Share</strong>
                 </MDBNavbarBrand>
                 <MDBNavbarToggler
                   onClick={this.toggleCollapse("navbarCollapse")}
@@ -48,25 +50,17 @@ class ContactFormPage extends Component {
                 >
                   <MDBNavbarNav left>
                     <MDBNavItem active>
-                      <MDBNavLink to="#!">Home</MDBNavLink>
+                      <MDBNavLink to="#!">Homepage</MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem>
-                      <MDBNavLink to="#!">Link</MDBNavLink>
-                    </MDBNavItem>
-                    <MDBNavItem>
-                      <MDBNavLink to="#!">Profile</MDBNavLink>
+                      <MDBNavLink to="#!">Events</MDBNavLink>
                     </MDBNavItem>
                   </MDBNavbarNav>
                   <MDBNavbarNav right>
                     <MDBNavItem>
                       <MDBFormInline waves>
                         <div className="md-form my-0">
-                          <input
-                            className="form-control mr-sm-2"
-                            type="text"
-                            placeholder="Search"
-                            aria-label="Search"
-                          />
+                          <input  className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
                         </div>
                       </MDBFormInline>
                     </MDBNavItem>
@@ -86,61 +80,36 @@ class ContactFormPage extends Component {
             <MDBContainer>
               <MDBRow>
                 <div className="white-text text-center text-md-left col-md-6 mt-xl-5 mb-5">
-                  <h1 className="display-4 font-weight-bold">Lorem ipsum </h1>
+                  <h1 className="display-4 font-weight-bold">Code & Share </h1>
                   <hr className="hr-light" />
                   <h6 className="mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Rem repellendus quasi fuga nesciunt dolorum nulla magnam
-                    veniam sapiente, fugiat! Commodi sequi non animi ea dolor
-                    molestiae iste.
+                 <p style={{fontSize: '20px'}}> Le club code & share a été créé suite au succès d’un événement intitulé
+kidsCanCode dont l’objectif est d’initier les enfants à l’algorithmique. C’est
+un club à but non lucratif destiné aux étudiants de l’ESI mais aussi à ceux
+d’autres universités.
+Il vise à encourager le partage de compétences et de connaissances et
+d’encourager le développement à travers la réalisation de solutions
+informatiques mais aussi à travers des formations. Les enfants ont eux aussi
+leur part dans la vision du club qui vise à initier cette catégorie à
+l’algorithmique et au codage.
+</p>
                   </h6>
                   <MDBBtn outline color="white">
                     Learn More
                   </MDBBtn>
                 </div>
                 <MDBCol md="6" xl="5" className="mb-4">
-                  <MDBCard className="dark-grey-text">
-                    <MDBCardBody className="z-depth-2">
-                      <h3 className="dark-grey-text text-center">
-                        <strong>Write to us:</strong>
-                      </h3>
-                      <hr />
-                      <MDBInput label="Your name" icon="user" />
-                      <MDBInput label="Your email" icon="envelope" />
-                      <MDBInput
-                        label="Your message"
-                        icon="pencil-alt"
-                        type="textarea"
-                        rows="3"
-                      />
-                      <div className="text-center mt-3 black-text">
-                        <MDBBtn color="indigo">Send</MDBBtn>
-                        <hr />
-                        
-                      </div>
-                    </MDBCardBody>
-                  </MDBCard>
+                  <div>
+                  <img src={logo} class="animated bounce infinite slow" alt="Transparent CodeAndShare Logo" id="animated-img1"/>
+                  </div>
+                 
                 </MDBCol>
               </MDBRow>
             </MDBContainer>
           </MDBMask>
         </MDBView>
 
-        <MDBContainer>
-          <MDBRow className="py-5">
-            <MDBCol md="12" className="text-center">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
+        
       </div>
     );
   }
