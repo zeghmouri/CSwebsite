@@ -2,20 +2,19 @@ import React from "react";
 import "./sponsors.css";
 import { animated, useSpring } from "react-spring";
 import { useScroll } from "react-use-gesture";
-const clamp = (value: Number, clampAt: number = 30) => {
-  if (value > 0) {
-    return value > clampAt ? clampAt : value;
-  } else {
-    return value < -clampAt ? -clampAt : value;
-  }
-};
 const Scroll = () => {
   const movies = ["/ooredoo.png", "/djezzy.png", "/condor.png", "/yassir.png"];
 
   const [style, set] = useSpring(() => ({
     transform: "perspective(500px) rotateY(0deg)"
   }));
-
+  const clamp = (value: number, clampAt: number = 30) => {
+    if (value > 0) {
+      return value > clampAt ? clampAt : value;
+    } else {
+      return value < -clampAt ? -clampAt : value;
+    }
+  };
   const bind = useScroll(event => {
     set({
       transform: `perspective(500px) rotateY(${
@@ -25,11 +24,11 @@ const Scroll = () => {
   });
   return (
     <>
-      <div className="container" {...bind()}>
+      <div className="container " {...bind()}>
         {movies.map(src => (
           <animated.div
             key={src}
-            className="card"
+            className="card transparent"
             style={{
               ...style,
               backgroundImage: `url(${src})`

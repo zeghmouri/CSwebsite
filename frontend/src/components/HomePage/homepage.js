@@ -93,13 +93,10 @@ class ContactFormPage extends Component {
         </Router>
 
         <MDBView>
-          <MDBMask
-            className="d-flex justify-content-center align-items-center"
-            overlay="indigo-strong"
-          >
-            <MDBContainer>
+          <MDBMask>
+            <MDBContainer style={{ marginTop: 200 }}>
               <MDBRow>
-                <div className="white-text text-center text-md-left col-md-6 mt-xl-5 mb-5">
+                <div className="white-text text-center text-md-left col-md-5 mt-xl-3 mb-5">
                   <h1 className="display-4 font-weight-bold">Code & Share </h1>
                   <hr className="hr-light" />
                   <h6 className="mb-4">
